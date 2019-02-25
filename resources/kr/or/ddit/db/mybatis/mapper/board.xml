@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="board">
+
+<!-- 게시판생성 -->
+<insert id="insertboard" parameterType="boardVo">
+	insert into board
+		(board_num, board_name, y_n)
+	values (board_seq.nextval,#(board_name),#(y_n))
+</insert>
+
+</mapper>
